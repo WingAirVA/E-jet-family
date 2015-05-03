@@ -301,7 +301,7 @@
        <z> 54.372 </z>
      </location>
      <capacity unit="KG"> 800 </capacity>
-     <contents unit="KG"> 1335 </contents>
+     <contents unit="KG"> 733 </contents>
   </tank>
 
 </propulsion>
