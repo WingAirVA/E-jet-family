@@ -197,14 +197,14 @@
 			<prop>/controls/flight/aileron-trim</prop>
 		</output>
 		<config>
-			<Kp>0.06</Kp>
+			<Kp>0.05</Kp>
 			<beta>1</beta>
 			<alpha>0.1</alpha>
 			<gamma>0</gamma>
 			<Ti>10</Ti>
 			<Td>0.00001</Td>
-			<u_min>-0.5</u_min>
-			<u_max>0.5</u_max>
+			<u_min>-5</u_min>
+			<u_max>5</u_max>
 		</config>
 	</pid-controller>
 
@@ -284,14 +284,14 @@
 			<prop>/controls/flight/aileron-trim</prop>
 		</output>
 		<config>
-			<Kp>0.08</Kp>
+			<Kp>0.05</Kp>
 			<beta>1</beta>
 			<alpha>0.1</alpha>
 			<gamma>0</gamma>
 			<Ti>10</Ti>
 			<Td>0.00001</Td>
-			<u_min>-0.5</u_min>
-			<u_max>0.5</u_max>
+			<u_min>-5</u_min>
+			<u_max>5</u_max>
 		</config>
 	</pid-controller>
 
@@ -377,8 +377,8 @@
 			<gamma>0</gamma>
 			<Ti>10</Ti>
 			<Td>0.00001</Td>
-			<u_min>-0.8</u_min>
-			<u_max>0.8</u_max>
+			<u_min>-5</u_min>
+			<u_max>5</u_max>
 		</config>
 	</pid-controller>
 
@@ -414,16 +414,17 @@
  	   <output>
  	     <prop>/controls/flight/elevator-trim</prop>
  	   </output>
- 	  	 <config>
-			<Kp>-0.01</Kp>
-			<beta>1</beta>
-			<alpha>0.1</alpha>
-			<gamma>0</gamma>
-			<Ti>10</Ti>
-			<Td>0.00001</Td>
-			<u_min>-1</u_min>
-			<u_max>1</u_max>
-		</config>
+ 	   <config>
+ 	     <Kp>-0.05</Kp>      <!-- proportional gain -->
+ 	     <beta>1.0</beta>    <!-- input value weighing factor -->
+ 	     <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+ 	     <gamma>0.0</gamma>  <!-- input value weighing factor for -->
+ 	                         <!-- unfiltered derivative error -->
+ 	     <Ti>1.0</Ti>        <!-- integrator time -->
+ 	     <Td>0.00001</Td>    <!-- derivator time -->
+ 	     <u_min>-1.0</u_min> <!-- minimum output clamp -->
+ 	     <u_max>1.0</u_max>  <!-- maximum output clamp -->
+ 	   </config>
  	  </pid-controller>
 
 	<!-- Vertical Speed Hold -->
@@ -487,16 +488,21 @@
     <output>
       <prop>/controls/flight/elevator-trim</prop>
     </output>
-   <config>
-			<Kp>-0.02</Kp>
-			<beta>1</beta>
-			<alpha>0.01</alpha>
-			<gamma>0</gamma>
-			<Ti>10</Ti>
-			<Td>0.0000001</Td>
-			<u_min>-1.2</u_min>
-			<u_max>1.2</u_max>
-		</config>
+    <config>
+      <Ts>0.005</Ts> 
+      <Kp>-0.015</Kp>
+      <beta>1.0</beta>
+      <alpha>0.1</alpha>
+      <gamma>0.0</gamma>
+      <Ti>1.0</Ti>
+      <Td>0.0</Td>
+      <u_min>
+        <value>-0.7</value>
+      </u_min>
+      <u_max>
+        <value>0.7</value>
+      </u_max>
+    </config>
   </pid-controller>
 
 	<!-- Altitude hold -->
@@ -602,14 +608,14 @@
 			<prop>/controls/flight/elevator-trim</prop>
 		</output>
 		<config>
-			<Kp>-0.01</Kp>
+			<Kp>-0.006</Kp>
 			<beta>1</beta>
 			<alpha>0.01</alpha>
 			<gamma>0</gamma>
-			<Ti>5</Ti>
-			<Td>0.000000001</Td>
-			<u_min>-1</u_min>
-			<u_max>1</u_max>
+			<Ti>10</Ti>
+			<Td>0.0000000000001</Td>
+			<u_min>-0.4</u_min>
+			<u_max>0.4</u_max>
 		</config>
 	</pid-controller>
 
@@ -644,12 +650,12 @@
 			<prop>/controls/flight/elevator-trim</prop>
 		</output>
 		<config>
-			<Kp>-0.01</Kp>
+			<Kp>-0.0075</Kp>
 			<beta>1</beta>
-			<alpha>0.01</alpha>
+			<alpha>0.1</alpha>
 			<gamma>0</gamma>
-			<Ti>5</Ti>
-			<Td>0.000000001</Td>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
 			<u_min>-1</u_min>
 			<u_max>1</u_max>
 		</config>
