@@ -4,7 +4,7 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Air Côte d'Ivoire</name>
+            <name type="string">Air Cote d'Ivoire</name>
             <texture>/../Models/Liveries/ERJ170/VRE.png</texture>
         </livery>
     </model>
