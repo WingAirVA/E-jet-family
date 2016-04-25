@@ -5,7 +5,7 @@
     <model>
         <livery>
             <name type="string">cloud9 Airways</name>
-            <texture>/../Models/Liveries/ERJ170/cloud9ERJ170.png</texture>
+            <texture>/../Models/Liveries/ERJ170/MIAC9ERJ170LR.png</texture>
         </livery>
     </model>
 </sim>

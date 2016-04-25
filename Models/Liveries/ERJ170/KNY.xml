@@ -4,7 +4,7 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Kenya Airways</name>
+            <name type="string">Kenya Airways (5Y-KYL)</name>
             <texture>/../Models/Liveries/ERJ170/KenyaAirways.png</texture>
         </livery>
     </model>
