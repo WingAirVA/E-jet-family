@@ -897,24 +897,6 @@
  <max-dist>100.0</max-dist>
 </announcement>
 
-<announcement>
-<name>boarding1</name>
- <path>Aircraft/E-jet-family/Sounds/music.wav</path>
- <mode>looped</mode>
- <condition>
-  <property>sim/sound/music1</property>
- </condition>
-        <volume>
-            <factor>8</factor>
-        </volume>
-  <position>
-      <x>0.00</x>
-      <y>0.00</y>
-      <z>0.00</z>
- </position>
- <reference-dist>10.0</reference-dist>
- <max-dist>100.0</max-dist>
-</announcement>
 
 <announcement>
 <name>boarding2</name>
@@ -935,43 +917,6 @@
  <max-dist>100.0</max-dist>
 </announcement>
 
-<announcement>
-<name>boarding3</name>
- <path>Aircraft/E-jet-family/Sounds/etihad-board.wav</path>
- <mode>looped</mode>
- <condition>
-  <property>sim/sound/music3</property>
- </condition>
-        <volume>
-            <factor>8</factor>
-        </volume>
-  <position>
-      <x>0.00</x>
-      <y>0.00</y>
-      <z>0.00</z>
- </position>
- <reference-dist>10.0</reference-dist>
- <max-dist>100.0</max-dist>
-</announcement>
-
-<announcement>
-<name>boarding4</name>
- <path>Aircraft/E-jet-family/Sounds/qatar-board.wav</path>
- <mode>looped</mode>
- <condition>
-  <property>sim/sound/music4</property>
- </condition>
-        <volume>
-            <factor>8</factor>
-        </volume>
-  <position>
-      <x>0.00</x>
-      <y>0.00</y>
-      <z>0.00</z>
- </position>
- <reference-dist>10.0</reference-dist>
- <max-dist>100.0</max-dist>
-</announcement>
 
 <announcement>
 <name>brace</name>
