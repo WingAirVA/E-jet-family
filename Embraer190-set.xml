@@ -5,6 +5,7 @@
 	<sim>
 		<description>Embraer Regional Jet 190 (190-100)</description>
 		<author>Narendran Muraleedharan (see Thanks.txt for more info)</author>
+		<variant-of>Embraer170</variant-of>
 		<flight-model>jsb</flight-model>
 		<aero>ERJ190</aero>
 		<engine>GE_CF34-10E</engine>

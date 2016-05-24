@@ -5,6 +5,7 @@
 	<sim>
 		<description>Embraer Regional Jet 175 (170-200)</description>
 		<author>Narendran Muraleedharan (see Thanks.txt for more info)</author>
+		<variant-of>Embraer170</variant-of>
 		<flight-model>jsb</flight-model>
 		<aero>ERJ175</aero>
 		<engine>GE_CF34-8E</engine>
