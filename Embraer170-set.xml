@@ -10,9 +10,9 @@
 		<engine>GE_CF34-8E</engine>
 		<model>
 			<path>Aircraft/E-jet-family/XMLs/ERJ-170.xml</path>
- <livery>
-  <file type="string"/>
- </livery>
+			<livery>
+				<file type="string"/>
+			</livery>
 			<E-jet-family>
 				<heading-bug-pfd-deg type="double">0</heading-bug-pfd-deg>
 				<heading-bug-deg type="double">0</heading-bug-deg>
@@ -33,7 +33,7 @@
                 <position-y-m>-1.489</position-y-m>
                 <position-z-m>0.034</position-z-m>
                 <jetway-hood-deg>8</jetway-hood-deg>
-            </door>
+			</door>
 		</model>
 
 		<flaps>
@@ -85,17 +85,17 @@
 			<redout>
 				<enabled type="bool">true</enabled>
 				<parameters>
-				  <blackout-complete-g type="double">7</blackout-complete-g>
-				  <blackout-onset-g type="double">4.5</blackout-onset-g>
-				  <redout-complete-g type="double">-4.5</redout-complete-g>
-				  <redout-onset-g type="double">-2</redout-onset-g>
+					<blackout-complete-g type="double">7</blackout-complete-g>
+					<blackout-onset-g type="double">4.5</blackout-onset-g>
+					<redout-complete-g type="double">-4.5</redout-complete-g>
+					<redout-onset-g type="double">-2</redout-onset-g>
 				</parameters>
 			</redout>
 			<camera-group>
 				<znear type="double">0.1</znear>
 			</camera-group>
 		</rendering>
-        
+
 		<view>
 			<name>Pilot View</name>
 			<internal archive="y">true</internal>
@@ -104,7 +104,7 @@
 				<y-offset-m archive="y">1.43</y-offset-m>
 				<z-offset-m archive="y">-11.57</z-offset-m>
 				<pitch-offset-deg archive="y">-8.0</pitch-offset-deg>
-<default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+				<default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
 			</config>
 		</view>
 		<view n="100">
@@ -120,67 +120,67 @@
 			</config>
 		</view>
 
-  <view n="101">
-    <name>Wing View</name>
-    <type>lookfrom</type>
-    <internal archive="y">true</internal>
-    <config>
-      <from-model type="bool">true</from-model>
-      <from-model-idx type="int">0</from-model-idx>
-      <ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
-      <default-field-of-view-deg type="double">70</default-field-of-view-deg>
-      <pitch-offset-deg>-8.0</pitch-offset-deg>
-      <heading-offset-deg type="double">90</heading-offset-deg> <!-- parallel to the panel -->
-      <x-offset-m archive="y">-1.84 </x-offset-m> <!--Left/Right-->
-      <y-offset-m archive="y"> 0.99 </y-offset-m> <!--Up/Down-->
-      <z-offset-m archive="y"> 0.23 </z-offset-m> <!--Fdw/Back-->
-    </config>
-  </view>
-  
-  <view n="102">
-   <name>Tail view</name>
-   <type>lookfrom</type>
-   <internal type="bool">false</internal>
-   <config>
-    <from-model type="bool">true</from-model>
-    <from-model-idx type="int">0</from-model-idx>
-    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
-    <x-offset-m type="double">0.00</x-offset-m>
-    <y-offset-m type="double">7.64</y-offset-m>
-    <z-offset-m type="double">13.14</z-offset-m>
-    <pitch-offset-deg>-10</pitch-offset-deg>
-    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
-   </config>
-   <dynamic>
-    <enabled type="bool">false</enabled>
-   </dynamic>
-  </view>
+		<view n="101">
+			<name>Wing View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">70</default-field-of-view-deg>
+				<pitch-offset-deg>-8.0</pitch-offset-deg>
+				<heading-offset-deg type="double">90</heading-offset-deg> <!-- parallel to the panel -->
+				<x-offset-m archive="y">-1.84 </x-offset-m> <!--Left/Right-->
+				<y-offset-m archive="y"> 0.99 </y-offset-m> <!--Up/Down-->
+				<z-offset-m archive="y"> 0.23 </z-offset-m> <!--Fdw/Back-->
+			</config>
+		</view>
+
+		<view n="102">
+			<name>Tail view</name>
+			<type>lookfrom</type>
+			<internal type="bool">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
+				<x-offset-m type="double">0.00</x-offset-m>
+				<y-offset-m type="double">7.64</y-offset-m>
+				<z-offset-m type="double">13.14</z-offset-m>
+				<pitch-offset-deg>-10</pitch-offset-deg>
+				<default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+			</config>
+			<dynamic>
+				<enabled type="bool">false</enabled>
+			</dynamic>
+		</view>
 
 
-  <view n="103">
-        <name>Copilot View</name>
-        <type>lookfrom</type>
-        <internal archive="y">true</internal>
-        <config>
-            <from-model type="bool">true</from-model>
-		<x-offset-m archive="y">0.53</x-offset-m>
-		<y-offset-m archive="y">1.43</y-offset-m>
-		<z-offset-m archive="y">-11.57</z-offset-m>
-            <pitch-offset-deg archive="y">-8.0</pitch-offset-deg>
-        </config>
-  </view>
-        
-  <view n="104">
-        <name>Passenger View (Economy Class)</name>
-        <type>lookfrom</type>
-        <internal archive="y">true</internal>
-        <config>
-            <from-model type="bool">true</from-model>
-            <x-offset-m archive="y">-1.09</x-offset-m>
-            <y-offset-m archive="y">1.28</y-offset-m>
-            <z-offset-m archive="y">0</z-offset-m>
-        </config>
-  </view>
+		<view n="103">
+			<name>Copilot View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.53</x-offset-m>
+				<y-offset-m archive="y">1.43</y-offset-m>
+				<z-offset-m archive="y">-11.57</z-offset-m>
+				<pitch-offset-deg archive="y">-8.0</pitch-offset-deg>
+			</config>
+		</view>
+
+		<view n="104">
+			<name>Passenger View (Economy Class)</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">-1.09</x-offset-m>
+				<y-offset-m archive="y">1.28</y-offset-m>
+				<z-offset-m archive="y">0</z-offset-m>
+			</config>
+		</view>
 
 		<menubar>
 			<default>
@@ -191,24 +191,24 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/E-jet-family/Systems/autopilot-dlg.xml");
-							 autopilot.open();
+								var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/E-jet-family/Systems/autopilot-dlg.xml");
+								autopilot.open();
 							</script>
 						</binding>
 					</item>
 				</menu>
                 <menu n="5">
                     <item n="1">
-                    <label>Radio Stack</label>
+						<label>Radio Stack</label>
                         <binding>
                             <command>nasal</command>
                             <script>dialogs.Radio.open()</script>
-                        </binding>
-                    </item>
-                </menu>
+						</binding>
+					</item>
+				</menu>
 				<menu n="100">
 					<label>E-jet-family</label>
-<enabled type="bool">true</enabled>
+					<enabled type="bool">true</enabled>
 					<item>
 						<name>autostart</name>
 						<label>Autostart</label>
@@ -222,33 +222,33 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 aircraft.livery.dialog.open()
+								aircraft.livery.dialog.open()
 							</script>
 						</binding>
 					</item>
 					<item>
       					<label>Airport Operations</label>
       					<binding>
-       					<command>nasal</command>
-       					<script>
-	  				var mal = gui.Dialog.new("/sim/gui/dialogs/E-jet-family[0]/menu/dialog", 
-                                                              "Aircraft/E-jet-family/Systems/operations-dlg.xml");
-        				mal.open();
-       					</script>
-      					</binding>
-     					</item>
+							<command>nasal</command>
+							<script>
+								var mal = gui.Dialog.new("/sim/gui/dialogs/E-jet-family[0]/menu/dialog",
+								"Aircraft/E-jet-family/Systems/operations-dlg.xml");
+								mal.open();
+							</script>
+						</binding>
+					</item>
 
 					<item>
       					<label>Announcements</label>
       					<binding>
-       					<command>nasal</command>
-       					<script>
-	  				var mal = gui.Dialog.new("/sim/gui/dialogs/E-jet-family[1]/menu/dialog", 
-                                                              "Aircraft/E-jet-family/Systems/announcements-dlg.xml");
-        				mal.open();
-       					</script>
-      					</binding>
-     					</item>
+							<command>nasal</command>
+							<script>
+								var mal = gui.Dialog.new("/sim/gui/dialogs/E-jet-family[1]/menu/dialog",
+								"Aircraft/E-jet-family/Systems/announcements-dlg.xml");
+								mal.open();
+							</script>
+						</binding>
+					</item>
 
 					<item>
 						<name>pushback</name>
@@ -264,8 +264,8 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/E-jet-family/Systems/lights-dlg.xml");
-							 lights.open();
+								var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/E-jet-family/Systems/lights-dlg.xml");
+								lights.open();
 							</script>
 						</binding>
 					</item>
@@ -275,8 +275,8 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 var tiller = gui.Dialog.new("sim/gui/dialogs/tiller/dialog", "Aircraft/E-jet-family/Systems/tiller-dlg.xml");
-							 tiller.open();
+								var tiller = gui.Dialog.new("sim/gui/dialogs/tiller/dialog", "Aircraft/E-jet-family/Systems/tiller-dlg.xml");
+								tiller.open();
 							</script>
 						</binding>
 					</item>
@@ -320,27 +320,27 @@
 			</key>
 		</help>
 
-    <multiplay>
-        <generic>
-            <int n="0" alias="/systems/electrical/outputs/strobe"/>
-            <int n="1" alias="/systems/electrical/outputs/beacon"/>
-            <int n="2" alias="/systems/electrical/outputs/taxi-lights"/>
-            <int n="3" alias="/systems/electrical/outputs/logo-lights"/>
-            <int n="4" alias="/systems/electrical/outputs/landing-light[0]"/>
-            <int n="5" alias="/systems/electrical/outputs/landing-light[1]"/>
-            <int n="6" alias="/systems/electrical/outputs/landing-light[2]"/>
-            <int n="7" alias="/systems/electrical/outputs/nav-lights"/>
+		<multiplay>
+			<generic>
+				<int n="0" alias="/systems/electrical/outputs/strobe"/>
+				<int n="1" alias="/systems/electrical/outputs/beacon"/>
+				<int n="2" alias="/systems/electrical/outputs/taxi-lights"/>
+				<int n="3" alias="/systems/electrical/outputs/logo-lights"/>
+				<int n="4" alias="/systems/electrical/outputs/landing-light[0]"/>
+				<int n="5" alias="/systems/electrical/outputs/landing-light[1]"/>
+				<int n="6" alias="/systems/electrical/outputs/landing-light[2]"/>
+				<int n="7" alias="/systems/electrical/outputs/nav-lights"/>
 
-            <float n="0" alias="/gear/gear[0]/compression-m"/>
-            <float n="1" alias="/gear/gear[1]/compression-m"/>
-            <float n="2" alias="/gear/gear[2]/compression-m"/>
-            <float n="3" alias="/gear/gear[1]/compression-m"/>
-            <float n="4" alias="/gear/gear[2]/compression-m"/>
-            <float n="5" alias="/surface-positions/speedbrake-norm"/>
-            <float n="6" alias="/surface-positions/reverser-norm"/>
-            <string  alias="/sim/multiplay/callsign"/>
-        </generic>
-    </multiplay>
+				<float n="0" alias="/gear/gear[0]/compression-m"/>
+				<float n="1" alias="/gear/gear[1]/compression-m"/>
+				<float n="2" alias="/gear/gear[2]/compression-m"/>
+				<float n="3" alias="/gear/gear[1]/compression-m"/>
+				<float n="4" alias="/gear/gear[2]/compression-m"/>
+				<float n="5" alias="/surface-positions/speedbrake-norm"/>
+				<float n="6" alias="/surface-positions/reverser-norm"/>
+				<string  alias="/sim/multiplay/callsign"/>
+			</generic>
+		</multiplay>
 	</sim>
 
 	<consumables>
@@ -488,7 +488,7 @@
 			<seatbelt-sign type="bool">false</seatbelt-sign>
 		</switches>
 	</controls>
-	
+
 	<engines>
 		<apu>
 			<rpm type="double">0</rpm>
@@ -530,15 +530,15 @@
 	</gear>
 
 	<instrumentation>
- <cdu>
-  <display>IDENT</display>
-  <ident>
-   <model>ERJ170-100</model>
-   <engines>GE_CF34-8E</engines>
-  </ident>
-  <input type="string"/>
-  <serviceable type="bool">true</serviceable>
- </cdu>
+		<cdu>
+			<display>IDENT</display>
+			<ident>
+				<model>ERJ170-100</model>
+				<engines>GE_CF34-8E</engines>
+			</ident>
+			<input type="string"/>
+			<serviceable type="bool">true</serviceable>
+		</cdu>
 		<fmc>
 			<to-flap type="double">10</to-flap>
 			<vspeeds>
@@ -567,7 +567,7 @@
 				<category-6 type="int">1</category-6>
 				<category-7 type="int">124</category-7>
 				<category-8 type="int">2</category-8>
-				<category-9 type="int">3</category-9> 
+				<category-9 type="int">3</category-9>
 				<category-10 type="int">6</category-10>
 				<category-13 type="int">7</category-13>
 				<category-14 type="int">0</category-14>
@@ -597,7 +597,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 reversethrust.togglereverser();
+						reversethrust.togglereverser();
 					</script>
 				</binding>
 			</key>
@@ -608,7 +608,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 walk.walk_about(0.1);
+						walk.walk_about(0.1);
 					</script>
 				</binding>
 			</key>
@@ -650,7 +650,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 walk.walk_about(0.25);
+						walk.walk_about(0.25);
 					</script>
 				</binding>
 			</key>
@@ -661,7 +661,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 walk.walk_about(-0.1);
+						walk.walk_about(-0.1);
 					</script>
 				</binding>
 			</key>
@@ -673,15 +673,15 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 var node = props.globals.getNode("/autopilot/settings/speed", 1);
-					 if (node.getValue() == "speed-to-ga")
-					  {
-					  node.setValue("");
-					  }
-					 else
-					  {
-					  node.setValue("speed-to-ga");
-					  }
+						var node = props.globals.getNode("/autopilot/settings/speed", 1);
+						if (node.getValue() == "speed-to-ga")
+						{
+							node.setValue("");
+						}
+						else
+						{
+							node.setValue("speed-to-ga");
+						}
 					</script>
 				</binding>
 			</key>
@@ -718,19 +718,19 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 var hdgNode = props.globals.getNode("/autopilot/settings/heading", 1);
-					 var altNode = props.globals.getNode("/autopilot/settings/altitude", 1);
+						var hdgNode = props.globals.getNode("/autopilot/settings/heading", 1);
+						var altNode = props.globals.getNode("/autopilot/settings/altitude", 1);
 
-					 if (altNode.getValue() == "gs1-hold")
-					  {
-					  hdgNode.setValue("dg-heading-hold");
-					  altNode.setValue("altitude-hold");
-					  }
-					 else
-					  {
-					  hdgNode.setValue("nav1-hold");
-					  altNode.setValue("gs1-hold");
-					  }
+						if (altNode.getValue() == "gs1-hold")
+						{
+							hdgNode.setValue("dg-heading-hold");
+							altNode.setValue("altitude-hold");
+						}
+						else
+						{
+							hdgNode.setValue("nav1-hold");
+							altNode.setValue("gs1-hold");
+						}
 					</script>
 				</binding>
 			</key>
@@ -749,15 +749,15 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 var node = props.globals.getNode("/autopilot/settings/heading", 1);
-					 if (node.getValue() == "nav1-hold")
-					  {
-					  node.setValue("dg-heading-hold");
-					  }
-					 else
-					  {
-					  node.setValue("nav1-hold");
-					  }
+						var node = props.globals.getNode("/autopilot/settings/heading", 1);
+						if (node.getValue() == "nav1-hold")
+						{
+							node.setValue("dg-heading-hold");
+						}
+						else
+						{
+							node.setValue("nav1-hold");
+						}
 					</script>
 				</binding>
 			</key>
@@ -767,15 +767,15 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 var node = props.globals.getNode("/autopilot/settings/heading", 1);
-					 if (node.getValue() == "true-heading-hold")
-					  {
-					  node.setValue("dg-heading-hold");
-					  }
-					 else
-					  {
-					  node.setValue("true-heading-hold");
-					  }
+						var node = props.globals.getNode("/autopilot/settings/heading", 1);
+						if (node.getValue() == "true-heading-hold")
+						{
+							node.setValue("dg-heading-hold");
+						}
+						else
+						{
+							node.setValue("true-heading-hold");
+						}
 					</script>
 				</binding>
 			</key>
@@ -785,8 +785,8 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-					 var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/E-jet-family/Systems/autopilot-dlg.xml");
-					 autopilot.open();
+						var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/E-jet-family/Systems/autopilot-dlg.xml");
+						autopilot.open();
 					</script>
 				</binding>
 			</key>
@@ -820,7 +820,7 @@
 		</erj>
         <dialogs>
             <file>Aircraft/E-jet-family/Nasal/radio.nas</file>
-        </dialogs>
+		</dialogs>
 	</nasal>
 
 </PropertyList>
