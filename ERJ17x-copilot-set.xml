@@ -129,7 +129,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-								aircraft_dual_control.pilot_type = "Aircraft/E-jet-family/XMLs/ERJ-2175.xml";
+								aircraft_dual_control.pilot_type = "Aircraft/E-jet-family/XMLs/ERJ-175.xml";
 								dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type);
 							</script>
 						</binding>
