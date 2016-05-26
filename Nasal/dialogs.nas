@@ -1,6 +1,12 @@
-var Radio = gui.Dialog.new("/sim/gui/dialogs/radios/dialog", "Aircraft/E-jet-family/Systems/radio.xml");
-var Autopilot = gui.Dialog.new("/sim/gui/dialogs/autopilot/dialog", "Aircraft/E-jet-family/Systems/autopilot-dlg.xml");
-var Operations = gui.Dialog.new("/sim/gui/dialogs/E-jet-family[0]/menu/dialog", "Aircraft/E-jet-family/Systems/operations-dlg.xml");
-var Announcements = gui.Dialog.new("/sim/gui/dialogs/E-jet-family[1]/menu/dialog", "Aircraft/E-jet-family/Systems/announcements-dlg.xml");
-var Lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/E-jet-family/Systems/lights-dlg.xml");
-var Tiller = gui.Dialog.new("sim/gui/dialogs/tiller/dialog", "Aircraft/E-jet-family/Systems/tiller-dlg.xml");
+var aircraft_path = "Aircraft/E-jet-family/Systems/";
+var Dialogs = {
+	announcements: gui.Dialog.new("sim/gui/dialogs/E-jet-family[1]/menu/dialog", aircraft_path~"announcements-dlg.xml"),
+	autopilot: gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", aircraft_path~"autopilot-dlg.xml"),
+	lights: gui.Dialog.new("sim/gui/dialogs/lights/dialog", aircraft_path~"lights-dlg.xml"),
+	operations: gui.Dialog.new("sim/gui/dialogs/E-jet-family[0]/menu/dialog", aircraft_path~"operations-dlg.xml"),
+	radio: gui.Dialog.new("sim/gui/dialogs/radios/dialog", aircraft_path~"radio.xml"),
+	tiller: gui.Dialog.new("sim/gui/dialogs/tiller/dialog", aircraft_path~"tiller-dlg.xml"),
+};
+
+gui.menuBind("autopilot", "dialogs.Dialogs.autopilot.open();");
+gui.menuBind("radio", "dialogs.Dialogs.radio.open();");

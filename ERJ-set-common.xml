@@ -177,19 +177,20 @@
 
 		<menubar>
 			<default>
+			<!--
 				<menu n="3">
 					<item>
 						<name>autopilot</name>
 						<label>Autopilot Settings</label>
 						<binding>
 							<command>nasal</command>
-							<script>dialogs.Autopilot.open()</script>
+							<script>dialogs.Dialogs.autopilot.open()</script>
 						</binding>
 					</item>
 				</menu>
+
 				<menu n="5">
-					<item>
-						<name>radio</name>
+					<item n="5">
 						<label>Radio Stack</label>
 						<binding>
 							<command>nasal</command>
@@ -197,6 +198,7 @@
 						</binding>
 					</item>
 				</menu>
+			-->
 				<menu n="100">
 					<label>E-jet-family</label>
 					<enabled type="bool">true</enabled>
@@ -221,14 +223,14 @@
 						<label>Airport Operations</label>
 						<binding>
 							<command>nasal</command>
-							<script>dialogs.Operations.open()</script>
+							<script>dialogs.Dialogs.operations.open()</script>
 						</binding>
 					</item>
 					<item>
 						<label>Announcements</label>
 						<binding>
 							<command>nasal</command>
-							<script>dialogs.Announcements.open()</script>
+							<script>dialogs.Dialogs.announcements.open()</script>
 						</binding>
 					</item>
 					<item>
@@ -244,7 +246,7 @@
 						<label>Aircraft Lights</label>
 						<binding>
 							<command>nasal</command>
-							<script>dialogs.Lights.open()</script>
+							<script>dialogs.Dialogs.lights.open()</script>
 						</binding>
 					</item>
 					<item>
@@ -252,7 +254,7 @@
 						<label>Tiller Steering</label>
 						<binding>
 							<command>nasal</command>
-							<script>dialogs.Tiller.open()</script>
+							<script>dialogs.Dialogs.tiller.open()</script>
 						</binding>
 					</item>
 				</menu>
@@ -641,17 +643,7 @@
 				<desc>Toggle TO/GA lock</desc>
 				<binding>
 					<command>nasal</command>
-					<script>
-						var node = props.globals.getNode("/autopilot/settings/speed", 1);
-						if (node.getValue() == "speed-to-ga")
-						{
-							node.setValue("");
-						}
-						else
-						{
-							node.setValue("speed-to-ga");
-						}
-					</script>
+					<script>input.toggleTOGA()</script>
 				</binding>
 			</key>
 			<key n="26">
@@ -686,21 +678,7 @@
 				<desc>Toggle autopilot glide slope lock</desc>
 				<binding>
 					<command>nasal</command>
-					<script>
-						var hdgNode = props.globals.getNode("/autopilot/settings/heading", 1);
-						var altNode = props.globals.getNode("/autopilot/settings/altitude", 1);
-
-						if (altNode.getValue() == "gs1-hold")
-						{
-							hdgNode.setValue("dg-heading-hold");
-							altNode.setValue("altitude-hold");
-						}
-						else
-						{
-							hdgNode.setValue("nav1-hold");
-							altNode.setValue("gs1-hold");
-						}
-					</script>
+					<script>input.toggleGS()</script>
 				</binding>
 			</key>
 			<key n="8">
@@ -717,17 +695,7 @@
 				<desc>Toggle autopilot nav1 lock</desc>
 				<binding>
 					<command>nasal</command>
-					<script>
-						var node = props.globals.getNode("/autopilot/settings/heading", 1);
-						if (node.getValue() == "nav1-hold")
-						{
-							node.setValue("dg-heading-hold");
-						}
-						else
-						{
-							node.setValue("nav1-hold");
-						}
-					</script>
+					<script>input.toggleHeadingMode("nav1-hold")</script>
 				</binding>
 			</key>
 			<key n="262">
@@ -735,17 +703,7 @@
 				<desc>Toggle Autopilot Heading Mode</desc>
 				<binding>
 					<command>nasal</command>
-					<script>
-						var node = props.globals.getNode("/autopilot/settings/heading", 1);
-						if (node.getValue() == "true-heading-hold")
-						{
-							node.setValue("dg-heading-hold");
-						}
-						else
-						{
-							node.setValue("true-heading-hold");
-						}
-					</script>
+					<script>input.toggleHeadingMode("true-heading-hold")</script>
 				</binding>
 			</key>
 			<key n="267">
@@ -753,7 +711,7 @@
 				<desc>Open autopilot dialog</desc>
 				<binding>
 					<command>nasal</command>
-					<script>dialogs.Autopilot.open()</script>
+					<script>dialogs.Dialogs.autopilot.open()</script>
 				</binding>
 			</key>
 		</keyboard>
@@ -785,5 +743,8 @@
 			<!--<file>Aircraft/E-jet-family/Nasal/radio.nas</file>-->
 			<file>Aircraft/E-jet-family/Nasal/dialogs.nas</file>
 		</dialogs>
+		<input>
+			<file>Aircraft/E-jet-family/Nasal/autopilot.nas</file>
+		</input>
 	</nasal>
 </PropertyList>
