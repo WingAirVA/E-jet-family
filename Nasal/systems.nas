@@ -11,18 +11,18 @@ aircraft.livery.init("Aircraft/E-jet-family/Models/Liveries/" ~ getprop("sim/aer
 
 # seatbelt/no smoking sign triggers
 setlistener("controls/switches/seatbelt-sign", func {
-	props.globals.getNode("sim/sound/seatbelt-sign").setBoolValue(1);
+	props.getNode("sim/sound/seatbelt-sign").setBoolValue(1);
 
 	settimer(func {
-		props.globals.getNode("sim/sound/seatbelt-sign").setBoolValue(0);
+		props.getNode("sim/sound/seatbelt-sign").setBoolValue(0);
 	}, 2);
 });
 
 setlistener("controls/switches/no-smoking-sign", func {
-	props.globals.getNode("sim/sound/no-smoking-sign").setBoolValue(1);
+	props.getNode("sim/sound/no-smoking-sign").setBoolValue(1);
 
 	settimer(func {
-		props.globals.getNode("sim/sound/no-smoking-sign").setBoolValue(0);
+		props.getNode("sim/sound/no-smoking-sign").setBoolValue(0);
 	}, 2);
 });
 
@@ -31,16 +31,16 @@ setlistener("controls/switches/no-smoking-sign", func {
 
 # APU loop function
 var apuLoop = func {
-	var on_fireNode = props.globals.getNode("engines/apu/on-fire");
-	var serviceableNode = props.globals.getNode("engines/apu/serviceable");
-	var starterNode = props.globals.getNode("controls/APU/starter");
-	var master_switchNode = props.globals.getNode("controls/APU/master-switch");
-	var runningNode = props.globals.getNode("engines/apu/running");
+	var on_fireNode = props.getNode("engines/apu/on-fire");
+	var serviceableNode = props.getNode("engines/apu/serviceable");
+	var starterNode = props.getNode("controls/APU/starter");
+	var master_switchNode = props.getNode("controls/APU/master-switch");
+	var runningNode = props.getNode("engines/apu/running");
 	if (on_fireNode.getBoolValue()) {
 		serviceableNode.setBoolValue(0);
 	}
 
-	if (props.globals.getNode("controls/APU/fire-switch").getBoolValue()) {
+	if (props.getNode("controls/APU/fire-switch").getBoolValue()) {
 		on_fireNode.setBoolValue(0);
 	}
 
@@ -74,34 +74,38 @@ var apuLoop = func {
  
 # engine loop function
 var engineLoop = func(engine_no) {
-	var tree1 = "engines/engine[" ~ engine_no ~ "]/";
+	var engOn_fire = props.getNode("engines/engine[" ~ engine_no ~ "]/on-fire");
 	var tree2 = "controls/engines/engine[" ~ engine_no ~ "]/";
 
-	if (props.globals.getNode(tree1 ~ "on-fire").getBoolValue()) {
-		props.globals.getNode("sim/failure-manager/engines/engine[" ~ engine_no ~ "]/serviceable").setBoolValue(0);
+	if (engOn_fire.getBoolValue()) {
+		props.getNode("sim/failure-manager/engines/engine[" ~ engine_no ~ "]/serviceable").setBoolValue(0);
 	}
 
-	if (props.globals.getNode(tree2 ~ "fire-bottle-discharge").getBoolValue()) {
-		props.globals.getNode(tree1 ~ "on-fire").setBoolValue(0);
+	if (props.getNode(tree2 ~ "fire-bottle-discharge").getBoolValue()) {
+		engOn_fire.setBoolValue(0);
 	}
 
-	if (props.globals.getNode("sim/failure-manager/engines/engine[" ~ engine_no ~ "]/serviceable").getBoolValue()) {
-		props.globals.getNode(tree2 ~ "cutoff").setBoolValue(props.globals.getNode(tree2 ~ "cutoff-switch").getBoolValue());
+	if (props.getNode("sim/failure-manager/engines/engine[" ~ engine_no ~ "]/serviceable").getBoolValue()) {
+		props.getNode(tree2 ~ "cutoff").setBoolValue(props.getNode(tree2 ~ "cutoff-switch").getBoolValue());
 	}
-	props.globals.getNode(tree2 ~ "starter").setBoolValue(props.globals.getNode(tree2 ~ "starter-switch").getBoolValue());
+	props.getNode(tree2 ~ "starter").setBoolValue(props.getNode(tree2 ~ "starter-switch").getBoolValue());
 
-	if (getprop("controls/engines/engine-start-switch") == 0 or getprop("controls/engines/engine-start-switch") == 2) {
-		props.globals.getNode(tree2 ~ "starter").setBoolValue(1);
-	}
-
-	if (!props.globals.getNode("engines/apu/running").getBoolValue()) {
-		props.globals.getNode(tree2 ~ "starter").setBoolValue(0);
+	var eng_start_sw = getprop("controls/engines/engine-start-switch");
+	if (eng_start_sw == 0 or eng_start_sw == 2) {
+		props.getNode(tree2 ~ "starter").setBoolValue(1);
 	}
 
-	settimer(engineLoop(engine_no), 0);
+	if (!props.getNode("engines/apu/running").getBoolValue()) {
+		props.getNode(tree2 ~ "starter").setBoolValue(0);
+	}
+
+	settimer(func {
+		engineLoop(engine_no);
+	}, 0);
 };
 
 # start the loop 2 seconds after the FDM initializes
+
 setlistener("sim/signals/fdm-initialized", func {
 	settimer(func {
 		engineLoop(0);
@@ -119,7 +123,7 @@ var startup = func {
 	setprop("controls/APU/starter", 1);
 
 	var listener1 = setlistener("engines/apu/running", func {
-		if (props.globals.getNode("engines/apu/running").getBoolValue()) {
+		if (props.getNode("engines/apu/running").getBoolValue()) {
 			setprop("controls/engines/engine-start-switch", 2);
 			settimer(func {
 				props.setAll("controls/engines/engine","cutoff-switch", 0);
@@ -128,7 +132,7 @@ var startup = func {
 		}
 	}, 0, 0);
 	var listener2 = setlistener("engines/engine[0]/running", func {
-		if (props.globals.getNode("engines/engine[0]/running").getBoolValue()) {
+		if (props.getNode("engines/engine[0]/running").getBoolValue()) {
 			settimer(func {
 				setprop("controls/APU/master-switch", 0);
 				setprop("controls/APU/starter", 0);
@@ -157,9 +161,9 @@ setlistener("sim/model/start-idling", func(idle) {
 
 # prevent retraction of the landing gear when any of the wheels are compressed
 setlistener("controls/gear/gear-down", func {
-	var down = props.globals.getNode("controls/gear/gear-down").getBoolValue();
+	var down = props.getNode("controls/gear/gear-down").getBoolValue();
 	if (!down and (getprop("gear/gear[0]/wow") or getprop("gear/gear[1]/wow") or getprop("gear/gear[2]/wow"))) {
-		props.globals.getNode("controls/gear/gear-down").setBoolValue(1);
+		props.getNode("controls/gear/gear-down").setBoolValue(1);
 	}
 });
 
@@ -264,8 +268,8 @@ var instruments = {
 		}
 	},
 	calcEGTDegC: func() {
-		foreach (var engine; props.globals.getChildren("engines/engine")) {
-			var egt_degf = engage.getValue("egt-degf");
+		foreach (var engine; props.getNode("engines").getChildren("engine")) {
+			var egt_degf = engine.getValue("egt-degf");
 
 			if (egt_degf != nil) {
 				engine.setValue("egt-degc", (egt_degf - 32) * 1.8);
