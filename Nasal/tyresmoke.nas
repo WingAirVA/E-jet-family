@@ -7,9 +7,7 @@ var registerTimer = func {
 	settimer(arg[0], UPDATE_PERIOD);
 } # end function
 
-var run_tyresmoke0 = 0;
-var run_tyresmoke1 = 0;
-var run_tyresmoke2 = 0;
+var run_tyresmoke = [0, 0, 0];
 # =============================== listeners ===============================
 #
 #setlistener( "controls/lighting/nav-lights", func {
@@ -47,29 +45,24 @@ var run_tyresmoke2 = 0;
 #}, 1, 0);
 
 for (var i = 0; i <= 2; i += 1) {
-	var gear = props.getNode("gear/gear[" ~ i ~ "]/position-norm");
-	setlistener(gear.getPath(), func {
-		if (gear == 1 ){
-			run_tyresmoke0 = 1;
+	var gear = "gear/gear[" ~ i ~ "]/position-norm";
+	setlistener(gear, func {
+		if (getprop(gear) == 1){
+			run_tyresmoke[i] = 1;
 		} else {
-			run_tyresmoke0 = 0;
+			run_tyresmoke[i] = 0;
 		}
 	}, 1, 0);
 }
 
 #============================ Tyre Smoke ===================================
-var tyresmoke_0 = aircraft.tyresmoke.new(0);
-var tyresmoke_1 = aircraft.tyresmoke.new(1);
-var tyresmoke_2 = aircraft.tyresmoke.new(2);
+var tyreSmokes = [aircraft.tyresmoke.new(0), aircraft.tyresmoke.new(1), aircraft.tyresmoke.new(2)];
 
 var tyresmoke = func {
-	#print ("run_tyresmoke ",run_tyresmoke0); 
-	if (run_tyresmoke0)
-		tyresmoke_0.update();
-	if (run_tyresmoke1)
-		tyresmoke_1.update();
-	if (run_tyresmoke2)
-		tyresmoke_2.update();
+	for (var i = 0; i <= 2; i += 1) {
+		if (run_tyresmoke[i])
+			tyreSmokes[i].update();
+	}
 	settimer(tyresmoke, 0);
 }# end tyresmoke
 
