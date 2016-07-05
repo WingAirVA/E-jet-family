@@ -658,37 +658,35 @@
 		<type>rotate</type>
 		<object-name>BATT1</object-name>
 		<property>controls/electric/battery-switch</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>90</dep></entry>
-			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>
+                <factor>-30</factor>
 		<axis>
-			<x1-m>-12.2185</x1-m>
-			<y1-m>-0.4413</y1-m>
-			<z1-m>1.6709</z1-m>
-			<x2-m>-12.2045</x2-m>
-			<y2-m>-0.4368</y2-m>
-			<z2-m>1.6470</z2-m>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
 		</axis>
+		<center>
+			<x-m>-12.21708</x-m>
+			<y-m>0</y-m>
+			<z-m>1.67033</z-m>
+		</center>
 	</animation>
 	<animation>
 		<type>rotate</type>
 		<object-name>BATT2</object-name>
 		<property>controls/electric/battery-switch</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>90</dep></entry>
-			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>
+                <factor>-30</factor>
 		<axis>
-			<x1-m>-12.2263</x1-m>
-			<y1-m>-0.3468</y1-m>
-			<z1-m>1.6893</z1-m>
-			<x2-m>-12.2155</x2-m>
-			<y2-m>-0.3431</y2-m>
-			<z2-m>1.6660</z2-m>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
 		</axis>
+		<center>
+			<x-m>-12.22527</x-m>
+			<y-m>0</y-m>
+			<z-m>1.68882</z-m>
+		</center>
 	</animation>
-	<animation>
+	<!--<animation>
 		<type>rotate</type>
 		<object-name>BATT1</object-name>
 		<property>controls/electric/battery-switch</property>
@@ -704,7 +702,7 @@
 			<y2-m>-0.4368</y2-m>
 			<z2-m>1.6470</z2-m>
 		</axis>
-	</animation>
+        </animation>-->
 	<animation>
 		<type>rotate</type>
 		<object-name>generator.1</object-name>
@@ -749,12 +747,12 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>-12.2110</x1-m>
-			<y1-m>-0.2488</y1-m>
-			<z1-m>1.7062</z1-m>
-			<x2-m>-12.1957</x2-m>
-			<y2-m>-0.2488</y2-m>
-			<z2-m>1.6793</z2-m>
+			<x1-m>-12.211</x1-m>
+			<y1-m>-0.24906</y1-m>
+			<z1-m>1.70663</z1-m>
+			<x2-m>-12.1962</x2-m>
+			<y2-m>-0.24906</y2-m>
+                        <z2-m>1.67996</z2-m>
 		</axis>
 	</animation>
 	<animation>
@@ -766,12 +764,12 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>-12.2110</x1-m>
-			<y1-m>-0.1538</y1-m>
-			<z1-m>1.7062</z1-m>
-			<x2-m>-12.1957</x2-m>
+			<x1-m>-12.211</x1-m>
+                        <y1-m>-0.1528</y1-m>
+			<z1-m>1.70663</z1-m>
+			<x2-m>-12.1962</x2-m>
 			<y2-m>-0.1528</y2-m>
-			<z2-m>1.6793</z2-m>
+                        <z2-m>1.67996</z2-m>
 		</axis>
 	</animation>
 	<animation>
@@ -784,11 +782,11 @@
 		</interpolation>
 		<axis>
 			<x1-m>-12.1633</x1-m>
-			<y1-m>-0.1978</y1-m>
-			<z1-m>1.7323</z1-m>
-			<x2-m>-12.1476</x2-m>
-			<y2-m>-0.1978</y2-m>
-			<z2-m>1.7058</z2-m>
+			<y1-m>-0.19901</y1-m>
+                        <z1-m>1.73306</z1-m>
+			<x2-m>-12.1485</x2-m>
+			<y2-m>-0.19901</y2-m>
+			<z2-m>1.70639</z2-m>
 		</axis>
 	</animation>
 	<animation>
@@ -800,12 +798,12 @@
 			<entry><ind>1</ind><dep>-90</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>-12.0823</x1-m>
-			<y1-m>-0.0606</y1-m>
-			<z1-m>1.777</z1-m>
-			<x2-m>-12.0661</x2-m>
-			<y2-m>-0.0606</y2-m>
-			<z2-m>1.7504</z2-m>
+			<x1-m>-12.0819</x1-m>
+			<y1-m>-0.0607</y1-m>
+			<z1-m>1.77762</z1-m>
+			<x2-m>-12.0671</x2-m>
+			<y2-m>-0.0607</y2-m>
+			<z2-m>1.75095</z2-m>
 		</axis>
 	</animation>
 
