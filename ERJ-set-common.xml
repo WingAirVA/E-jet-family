@@ -718,6 +718,9 @@
 	</input>
 
 	<nasal>
+		<systems>
+			<file>Aircraft/E-jet-family/Nasal/systems.nas</file>
+		</systems>
 		<electrical>
 			<file>Aircraft/E-jet-family/Nasal/electrical.nas</file>
 		</electrical>
