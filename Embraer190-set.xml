@@ -45,4 +45,11 @@
 			</ident>
 		</cdu>
 	</instrumentation>
+
+	<nasal>
+		<systems>
+			<file>Aircraft/E-jet-family/Nasal/systems190.nas</file>
+		</systems>
+	</nasal>
+
 </PropertyList>
