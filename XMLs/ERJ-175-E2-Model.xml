@@ -1060,12 +1060,12 @@
 	<animation>
 		<name>Left Fan</name>
 		<type>spin</type>
-		<object-name>fan.l</object-name>
+		<object-name>fanL</object-name>
 		<factor>-67</factor>
 		<property>engines/engine[0]/n1</property>
         <center>
-            <y-m>-4.04</y-m>
-            <z-m>-1.08</z-m>
+            <y-m>-4.09977</y-m>
+            <z-m>-0.81672</z-m>
         </center>
 		<axis>
 			<x>-1</x>
@@ -1078,12 +1078,12 @@
 	<animation>
 		<name>Right Fan</name>
 		<type>spin</type>
-		<object-name>fan.r</object-name>
+		<object-name>fanR</object-name>
 		<factor>67</factor>
 		<property>engines/engine[1]/n1</property>
         <center>
-            <y-m>4.04</y-m>
-            <z-m>-1.08</z-m>
+            <y-m>4.09977</y-m>
+            <z-m>-0.81672</z-m>
         </center>
 		<axis>
 			<x>-1</x>

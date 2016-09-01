@@ -44,17 +44,17 @@ var run_tyresmoke = [0, 0, 0];
 #	}
 #}, 1, 0);
 
-for (var i = 0; i <= 2; i += 1) {
-	var gear = "gear/gear[" ~ i ~ "]/position-norm";
-	setlistener(gear, func {
-		if (getprop(gear) == 1){
-			run_tyresmoke[i] = 1;
-		} else {
-			run_tyresmoke[i] = 0;
-		}
-	}, 1, 0);
-}
-
+#for (var i = 0; i <= 2; i += 1) {
+#	var gear = "gear/gear[" ~ i ~ "]/position-norm";
+#	setlistener(gear, func {
+#		if (getprop(gear) == 1){
+#			run_tyresmoke[i] = 1;
+#		} else {
+##			run_tyresmoke[i] = 0;
+#		}
+#	}, 1, 0);
+#}
+run_tyresmoke[i] = 1;
 #============================ Tyre Smoke ===================================
 var tyreSmokes = [aircraft.tyresmoke.new(0), aircraft.tyresmoke.new(1), aircraft.tyresmoke.new(2)];
 
