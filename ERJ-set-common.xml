@@ -110,7 +110,7 @@
 			<config>
 				<from-model type="bool">true</from-model>
 				<x-offset-m archive="y">0</x-offset-m>
-				<y-offset-m archive="y">-1.63</y-offset-m>
+				<y-offset-m archive="y">-1.60</y-offset-m>
 				<z-offset-m archive="y">0.99</z-offset-m>
 				<pitch-offset-deg archive="y">0</pitch-offset-deg>
 			</config>
@@ -128,7 +128,7 @@
 				<pitch-offset-deg>-8.0</pitch-offset-deg>
 				<heading-offset-deg type="double">90</heading-offset-deg><!-- parallel to the panel -->
 				<x-offset-m archive="y">-1.84 </x-offset-m><!--Left/Right-->
-				<y-offset-m archive="y"> 0.99 </y-offset-m><!--Up/Down-->
+				<y-offset-m archive="y"> 0.96 </y-offset-m><!--Up/Down-->
 				<z-offset-m archive="y"> 0.23 </z-offset-m><!--Fdw/Back-->
 			</config>
 		</view>
@@ -142,7 +142,7 @@
 				<from-model-idx type="int">0</from-model-idx>
 				<ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
 				<x-offset-m type="double">0.00</x-offset-m>
-				<y-offset-m type="double">7.64</y-offset-m>
+				<y-offset-m type="double">7.68</y-offset-m>
 				<z-offset-m type="double">13.14</z-offset-m>
 				<pitch-offset-deg>-10</pitch-offset-deg>
 				<default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
@@ -170,7 +170,7 @@
 			<config>
 				<from-model type="bool">true</from-model>
 				<x-offset-m archive="y">-1.09</x-offset-m>
-				<y-offset-m archive="y">1.28</y-offset-m>
+				<y-offset-m archive="y">1.30</y-offset-m>
 				<z-offset-m archive="y">0</z-offset-m>
 			</config>
 		</view>
@@ -552,7 +552,7 @@
 			<speaker>
 				<max-dist type="double">2</max-dist>
 				<reference-dist type="double">1</reference-dist>
-				<volume type="double">0.4</volume>
+				<volume type="double">0.9</volume>
 			</speaker>
 			<voice>
 				<file-prefix>Sounds/mk-viii/</file-prefix>
