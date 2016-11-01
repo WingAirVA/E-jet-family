@@ -32,7 +32,7 @@
         <max-dist>500.0</max-dist>
     </engine>
 
-<engine>
+        <engine>
 		<name>turbine1 l</name>
 		<mode>looped</mode>
 		<path>Aircraft/E-jet-family/Sounds/turbine.wav</path>
@@ -83,60 +83,6 @@
 			<factor>0.01</factor>
 		</pitch>
          </engine>    	
-
-	
-	<engine>
-		<name>turbine1 l</name>
-		<mode>looped</mode>
-		<path>Aircraft/E-jet-family/Sounds/turbine.wav</path>
-		<property>engines/engine[0]/n1</property>
-		<condition>
-			<property>sim/current-view/internal</property>
-			<less-than>
-				<property>sim/current-view/z-offset-m</property>
-				<value>1</value>
-			</less-than>
-		</condition>
-		<volume>
-			<property>engines/engine[0]/n1</property>
-			<factor>0.04</factor>
-			<offset>-2.0</offset>
-			<min>2.0</min>
-			<max>4.0</max>
-		</volume>
-		<pitch>
-			<property>engines/engine[0]/n1</property>
-			<offset>0</offset>
-			<factor>0.01</factor>
-		</pitch>
-	</engine>
-	
-	  <engine>
-		<name>turbine1 r</name>
-		<mode>looped</mode>
-		<path>Aircraft/E-jet-family/Sounds/turbine.wav</path>
-		<property>engines/engine[1]/n1</property>
-		<condition>
-			<property>sim/current-view/internal</property>
-			<less-than>
-				<property>sim/current-view/z-offset-m</property>
-				<value>1</value>
-			</less-than>
-		</condition>
-		<volume>
-			<property>engines/engine[1]/n1</property>
-			<factor>0.04</factor>
-			<offset>-2.0</offset>
-			<min>2.0</min>
-			<max>4.0</max>
-		</volume>
-		<pitch>
-			<property>engines/engine[1]/n1</property>
-			<offset>0</offset>
-			<factor>0.01</factor>
-		</pitch>
-         </engine>    	
-
 
     <engine>
 		<name>low l out</name>
@@ -1043,7 +989,6 @@
 			</less-than>
 		</condition>
           </gpws>
-
 
 
 </fx>
