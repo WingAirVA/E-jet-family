@@ -13,8 +13,8 @@
 
 <turbine_engine name="PW1715G">
   <milthrust>  13500.0 </milthrust>
-  <bypassratio>     1.0 </bypassratio>
-  <tsfc>            0.8 </tsfc>
+  <bypassratio>     9.0 </bypassratio>
+  <tsfc>            0.6 </tsfc>
   <bleed>           0.03</bleed>
   <idlen1>         30.0 </idlen1>
   <idlen2>         60.0 </idlen2>
