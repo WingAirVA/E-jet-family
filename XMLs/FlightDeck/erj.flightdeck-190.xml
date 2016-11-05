@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-	<path>../../Models/FlightDeck/erj-flightdeck.ac</path>
+	<path>Aircraft/E-jet-family/Models/FlightDeck/erj-flightdeck.ac</path>
 
 	<animation>
 		<type>translate</type>
@@ -20,7 +20,7 @@
 <!-- HUD -->
 
 	<model>
-		<path>Aircraft/E-jet-family/XMLs/FlightDeck/hud.xml</path>
+		<path>hud_L.xml</path>
 		<offsets>
 			<x-m>-12.3478</x-m>
 			<y-m>-0.533936</y-m>
@@ -29,7 +29,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/E-jet-family/XMLs/FlightDeck/hud1.xml</path>
+		<path>hud_R.xml</path>
 		<offsets>
 			<x-m>-12.3478</x-m>
 			<y-m>0.533936</y-m>
@@ -333,7 +333,7 @@
 
 	<model>
 		<name>Main Flight Display Right</name>
-		<path>Aircraft/E-jet-family/XMLs/Primus-Epic/MFD2.xml</path>
+		<path>Aircraft/E-jet-family/XMLs/Primus-Epic/MFD_R.xml</path>
         <offsets>
             <x-m>-12.53</x-m>
             <y-m>0.33</y-m>
@@ -344,7 +344,7 @@
 
 	<model>
 		<name>Main Flight Display Left</name>
-		<path>Aircraft/E-jet-family/XMLs/Primus-Epic/MFD.xml</path>
+		<path>Aircraft/E-jet-family/XMLs/Primus-Epic/MFD_L.xml</path>
         <offsets>
             <x-m>-12.53</x-m>
             <y-m>-0.31</y-m>
