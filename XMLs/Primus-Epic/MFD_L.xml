@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8' ?>
 <PropertyList>
-  
-  <path>../../Models/Primus-Epic/primus_epic_mfd.ac</path>
 
-<!-- Power on/off -->
+	<path>../../Models/Primus-Epic/primus_epic_mfd.ac</path>
+
+	<!-- Power on/off -->
 	<animation>
 		<name>Power on/off</name>
 		<type>select</type>
@@ -108,20 +108,20 @@
 		</white>
 	</colors>
 
-<!-- Thunderstorm Alert -->
+	<!-- Thunderstorm Alert -->
 
 	<animation>
 		<type>select</type>
 		<object-name>thunderstorm</object-name>
 		<condition>
-				<equals>
-					<property>/environment/thunderstorm-flag</property>
-					<value>1</value>
-				</equals>
+			<equals>
+				<property>/environment/thunderstorm-flag</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 
-<!-- Mode Select -->
+	<!-- Mode Select -->
 
 	<animation>
 		<type>pick</type>
@@ -131,7 +131,7 @@
 			<binding>
 				<command>property-cycle</command>
 				<property>controls/lighting/mfd-mode-1</property>
-					<value>1</value>
+				<value>1</value>
 			</binding>
 		</action>
 	</animation>
@@ -144,7 +144,7 @@
 			<binding>
 				<command>property-cycle</command>
 				<property>controls/lighting/mfd-mode-1</property>
-					<value>0</value>
+				<value>0</value>
 			</binding>
 		</action>
 	</animation>
@@ -157,7 +157,7 @@
 			<binding>
 				<command>property-cycle</command>
 				<property>controls/lighting/mfd-mode-1</property>
-					<value>2</value>
+				<value>2</value>
 			</binding>
 		</action>
 	</animation>
@@ -170,7 +170,7 @@
 			<binding>
 				<command>property-cycle</command>
 				<property>controls/lighting/mfd-mode-1</property>
-					<value>3</value>
+				<value>3</value>
 			</binding>
 		</action>
 	</animation>
@@ -183,7 +183,7 @@
 			<binding>
 				<command>property-cycle</command>
 				<property>controls/lighting/mfd-mode-1</property>
-					<value>4</value>
+				<value>4</value>
 			</binding>
 		</action>
 	</animation>
@@ -192,10 +192,10 @@
 		<type>select</type>
 		<object-name>DOOR</object-name>
 		<condition>
-				<equals>
-					<property>controls/lighting/mfd-mode-1</property>
-					<value>1</value>
-				</equals>
+			<equals>
+				<property>controls/lighting/mfd-mode-1</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 
@@ -203,10 +203,10 @@
 		<type>select</type>
 		<object-name>TCAS</object-name>
 		<condition>
-				<equals>
-					<property>controls/lighting/mfd-mode-1</property>
-					<value>0</value>
-				</equals>
+			<equals>
+				<property>controls/lighting/mfd-mode-1</property>
+				<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 
@@ -214,10 +214,10 @@
 		<type>select</type>
 		<object-name>WEATHER</object-name>
 		<condition>
-				<equals>
-					<property>controls/lighting/mfd-mode-1</property>
-					<value>2</value>
-				</equals>
+			<equals>
+				<property>controls/lighting/mfd-mode-1</property>
+				<value>2</value>
+			</equals>
 		</condition>
 	</animation>
 
@@ -225,10 +225,10 @@
 		<type>select</type>
 		<object-name>MAP</object-name>
 		<condition>
-				<equals>
-					<property>controls/lighting/mfd-mode-1</property>
-					<value>3</value>
-				</equals>
+			<equals>
+				<property>controls/lighting/mfd-mode-1</property>
+				<value>3</value>
+			</equals>
 		</condition>
 	</animation>
 
@@ -286,93 +286,93 @@
 		<object-name>Waypoint 10 altitude</object-name>
 		<object-name>Waypoint 10 altitude (metric)</object-name>
 		<condition>
-				<equals>
-					<property>controls/lighting/mfd-mode-1</property>
-					<value>4</value>
-				</equals>
+			<equals>
+				<property>controls/lighting/mfd-mode-1</property>
+				<value>4</value>
+			</equals>
 		</condition>
 	</animation>
 
-<!-- DOOR Mode -->
+	<!-- DOOR Mode -->
 
 	<animation>
 		<type>select</type>
 		<object-name>l1.off</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/l1/position-norm</property>
-					<value>0</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/l1/position-norm</property>
+				<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>l2.off</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/l2/position-norm</property>
-					<value>0</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/l2/position-norm</property>
+				<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>r1.off</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/r1/position-norm</property>
-					<value>0</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/r1/position-norm</property>
+				<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>r2.off</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/r2/position-norm</property>
-					<value>0</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/r2/position-norm</property>
+				<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>l1.on</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/l1/position-norm</property>
-					<value>1</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/l1/position-norm</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>l2.on</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/l2/position-norm</property>
-					<value>1</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/l2/position-norm</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>r1.on</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/r1/position-norm</property>
-					<value>1</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/r1/position-norm</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>r2.on</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/r2/position-norm</property>
-					<value>1</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/r2/position-norm</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 
@@ -380,20 +380,20 @@
 		<type>select</type>
 		<object-name>ladder.l1.on</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/l1-stairs/position-norm</property>
-					<value>1</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/l1-stairs/position-norm</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>ladder.l2.on</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/l2-stairs/position-norm</property>
-					<value>1</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/l2-stairs/position-norm</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 
@@ -401,24 +401,24 @@
 		<type>select</type>
 		<object-name>ladder.l1.off</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/l1-stairs/position-norm</property>
-					<value>0</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/l1-stairs/position-norm</property>
+				<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>ladder.l2.off</object-name>
 		<condition>
-				<equals>
-					<property>sim/model/door-positions/l2-stairs/position-norm</property>
-					<value>0</value>
-				</equals>
+			<equals>
+				<property>sim/model/door-positions/l2-stairs/position-norm</property>
+				<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 
-<!-- TCAS Mode -->
+	<!-- TCAS Mode -->
 
 	<!-- 3D TEXT -->
 
@@ -1597,8 +1597,14 @@
 		<object-name>WPCrs</object-name>
 		<property>autopilot/route-manager/wp[0]/dist</property>
 		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>50</ind><dep>0.942</dep></entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>50</ind>
+				<dep>0.942</dep>
+			</entry>
 		</interpolation>
 		<axis>
 			<x>0</x>
@@ -2042,18 +2048,18 @@
 	</animation>
 
 
-<!-- Weather Mode -->
+	<!-- Weather Mode -->
 
-<!-- METAR Availablity -->
+	<!-- METAR Availablity -->
 
 	<animation>
 		<type>select</type>
 		<object-name>metar.available</object-name>
 		<condition>
-				<equals>
-					<property>/environment/available-flag</property>
-					<value>1</value>
-				</equals>
+			<equals>
+				<property>/environment/available-flag</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 
@@ -2061,14 +2067,14 @@
 		<type>select</type>
 		<object-name>metar.unavailable</object-name>
 		<condition>
-				<equals>
-					<property>/environment/available-flag</property>
-					<value>0</value>
-				</equals>
+			<equals>
+				<property>/environment/available-flag</property>
+				<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 
-<!-- Temperature -->
+	<!-- Temperature -->
 
 	<animation>
 		<type>select</type>
@@ -2139,7 +2145,7 @@
 		</axis>
 	</animation>
 
-<!-- Wing Direction -->
+	<!-- Wing Direction -->
 
 	<animation>
 		<type>textranslate</type>
@@ -2175,7 +2181,7 @@
 		</axis>
 	</animation>
 
-<!-- Wind Speed (Knots) -->
+	<!-- Wind Speed (Knots) -->
 
 	<animation>
 		<type>textranslate</type>
@@ -2200,7 +2206,7 @@
 		</axis>
 	</animation>
 
-<!-- Rain Percentage -->
+	<!-- Rain Percentage -->
 
 	<animation>
 		<type>textranslate</type>
@@ -2236,7 +2242,7 @@
 		</axis>
 	</animation>
 
-<!-- Snow Percentage -->
+	<!-- Snow Percentage -->
 
 	<animation>
 		<type>textranslate</type>
@@ -2272,7 +2278,7 @@
 		</axis>
 	</animation>
 
-<!-- dewpoint -->
+	<!-- dewpoint -->
 
 	<animation>
 		<type>select</type>
@@ -2343,7 +2349,7 @@
 		</axis>
 	</animation>
 
-<!-- Visibility -->
+	<!-- Visibility -->
 
 	<animation>
 		<type>textranslate</type>
@@ -2401,7 +2407,7 @@
 		</axis>
 	</animation>
 
-<!-- Pressure In Mercury -->
+	<!-- Pressure In Mercury -->
 
 	<animation>
 		<type>textranslate</type>
@@ -2448,32 +2454,32 @@
 		</axis>
 	</animation>
 
-<!-- MAP Mode -->
+	<!-- MAP Mode -->
 
-<animation>
-  <type>texmultiple</type>
-  <object-name>map-disk</object-name>
-  <transform>
-    <property>/position/latitude-deg</property>
-    <subtype>textranslate</subtype>
-    <factor>0.005555556</factor>
-    <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
-  </transform>
-  <transform>
-    <property>/position/longitude-deg</property>
-    <subtype>textranslate</subtype>
-    <factor>0.002777778</factor>
-    <axis>
-     <x>1</x>
-     <y>0</y>
-     <z>0</z>
-   </axis>
-  </transform>
- </animation>
+	<animation>
+		<type>texmultiple</type>
+		<object-name>map-disk</object-name>
+		<transform>
+			<property>/position/latitude-deg</property>
+			<subtype>textranslate</subtype>
+			<factor>0.005555556</factor>
+			<axis>
+				<x>0</x>
+				<y>1</y>
+				<z>0</z>
+			</axis>
+		</transform>
+		<transform>
+			<property>/position/longitude-deg</property>
+			<subtype>textranslate</subtype>
+			<factor>0.002777778</factor>
+			<axis>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+			</axis>
+		</transform>
+	</animation>
 
 	<animation>
 		<name>Compass and Map Disk Rotate</name>
@@ -2491,7 +2497,7 @@
 		</center>
 	</animation>
 
-<!-- PLAN Mode -->
+	<!-- PLAN Mode -->
 
 	<text>
 		<name>Waypoint 1 ID</name>

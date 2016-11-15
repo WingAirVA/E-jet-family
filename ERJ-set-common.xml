@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <PropertyList>
-	
+
 	<sim>
 		<author>Narendran Muraleedharan (see Thanks.txt for more info)</author>
 		<flight-model>jsb</flight-model>
@@ -126,10 +126,14 @@
 				<ground-level-nearplane-m type="double">0.01</ground-level-nearplane-m>
 				<default-field-of-view-deg type="double">70</default-field-of-view-deg>
 				<pitch-offset-deg>-8.0</pitch-offset-deg>
-				<heading-offset-deg type="double">90</heading-offset-deg><!-- parallel to the panel -->
-				<x-offset-m archive="y">-1.84 </x-offset-m><!--Left/Right-->
-				<y-offset-m archive="y"> 0.99 </y-offset-m><!--Up/Down-->
-				<z-offset-m archive="y"> 0.23 </z-offset-m><!--Fdw/Back-->
+				<heading-offset-deg type="double">90</heading-offset-deg>
+				<!-- parallel to the panel -->
+				<x-offset-m archive="y">-1.84 </x-offset-m>
+				<!--Left/Right-->
+				<y-offset-m archive="y"> 0.99 </y-offset-m>
+				<!--Up/Down-->
+				<z-offset-m archive="y"> 0.23 </z-offset-m>
+				<!--Fdw/Back-->
 			</config>
 		</view>
 
@@ -177,7 +181,7 @@
 
 		<menubar>
 			<default>
-			<!--
+				<!--
 				<menu n="3">
 					<item>
 						<name>autopilot</name>
@@ -257,18 +261,16 @@
 							<script>dialogs.Dialogs.tiller.open()</script>
 						</binding>
 					</item>
- <item>
-
-                <label>System Failures</label>
-					<binding>
-                            <command>nasal</command>
-                            <script>
+					<item>
+						<label>System Failures</label>
+						<binding>
+							<command>nasal</command>
+							<script>
                              var failures = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/E-jet-family/Systems/failures-dlg.xml");
                              failures.open();
-                            </script>
-                    </binding>
-            </item>
-
+							</script>
+						</binding>
+					</item>
 				</menu>
 			</default>
 		</menubar>
@@ -567,7 +569,7 @@
 				<volume type="double">0.4</volume>
 			</speaker>
 			<voice>
-			<file-prefix>Aircraft/E-jet-family/Sounds/GPWS/</file-prefix>
+				<file-prefix>Aircraft/E-jet-family/Sounds/GPWS/</file-prefix>
 			</voice>
 		</mk-viii>
 	</instrumentation>
@@ -620,10 +622,14 @@
 				<binding>
 					<command>property-cycle</command>
 					<property>autopilot/autobrake/step</property>
-					<value type="int">0</value> <!-- OFF -->
-					<value type="int">1</value> <!-- LOW -->
-					<value type="int">2</value> <!-- MED -->
-					<value type="int">3</value> <!-- MAX -->
+					<value type="int">0</value>
+					<!-- OFF -->
+					<value type="int">1</value>
+					<!-- LOW -->
+					<value type="int">2</value>
+					<!-- MED -->
+					<value type="int">3</value>
+					<!-- MAX -->
 				</binding>
 			</key>
 			<key n="87">
@@ -726,35 +732,35 @@
 					<script>dialogs.Dialogs.autopilot.open()</script>
 				</binding>
 			</key>
-             <key n="50">
-  <name>2</name>
-  <desc>Decrease flaps.</desc>
-  <binding>
-   <command>nasal</command>
-   <script>controls.flapsDown(-1)</script>
-  </binding>
-  <mod-up>
-   <binding>
-    <command>nasal</command>
-    <script>controls.flapsDown(0)</script>
-   </binding>
-  </mod-up>
- </key>
+			<key n="50">
+				<name>2</name>
+				<desc>Decrease flaps.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>controls.flapsDown(-1)</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>controls.flapsDown(0)</script>
+					</binding>
+				</mod-up>
+			</key>
 
- <key n="49">
-  <name>1</name>
-  <desc>Increase flaps.</desc>
-  <binding>
-   <command>nasal</command>
-   <script>controls.flapsDown(1)</script>
-  </binding>
-  <mod-up>
-   <binding>
-    <command>nasal</command>
-    <script>controls.flapsDown(0)</script>
-   </binding>
-  </mod-up>
- </key>
+			<key n="49">
+				<name>1</name>
+				<desc>Increase flaps.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>controls.flapsDown(1)</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>controls.flapsDown(0)</script>
+					</binding>
+				</mod-up>
+			</key>
 		</keyboard>
 	</input>
 
@@ -786,7 +792,7 @@
 		</dialogs>
 		<input>
 			<file>Aircraft/E-jet-family/Nasal/autopilot.nas</file>
-                         <file>Aircraft/737-800/Nasal/engine-fire.nas</file>
+			<file>Aircraft/737-800/Nasal/engine-fire.nas</file>
 		</input>
 	</nasal>
 </PropertyList>
