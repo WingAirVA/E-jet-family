@@ -6,7 +6,9 @@ var Dialogs = {
 	operations: gui.Dialog.new("sim/gui/dialogs/E-jet-family[0]/menu/dialog", aircraft_path~"operations-dlg.xml"),
 	radio: gui.Dialog.new("sim/gui/dialogs/radios/dialog", aircraft_path~"radio.xml"),
 	tiller: gui.Dialog.new("sim/gui/dialogs/tiller/dialog", aircraft_path~"tiller-dlg.xml"),
+	failures: gui.Dialog.new("sim/gui/dialogs/failures/dialog", aircraft_path~"failures-dlg.xml"),
 };
 
 gui.menuBind("autopilot", "dialogs.Dialogs.autopilot.open();");
 gui.menuBind("radio", "dialogs.Dialogs.radio.open();");
+gui.menuBind("failures", "dialogs.Dialogs.failures.open();");

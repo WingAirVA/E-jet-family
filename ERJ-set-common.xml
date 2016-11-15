@@ -261,6 +261,7 @@
 							<script>dialogs.Dialogs.tiller.open()</script>
 						</binding>
 					</item>
+					<!--
 					<item>
 						<label>System Failures</label>
 						<binding>
@@ -271,6 +272,7 @@
 							</script>
 						</binding>
 					</item>
+					-->
 				</menu>
 			</default>
 		</menubar>
