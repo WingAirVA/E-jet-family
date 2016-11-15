@@ -181,28 +181,6 @@
 
 		<menubar>
 			<default>
-				<!--
-				<menu n="3">
-					<item>
-						<name>autopilot</name>
-						<label>Autopilot Settings</label>
-						<binding>
-							<command>nasal</command>
-							<script>dialogs.Dialogs.autopilot.open()</script>
-						</binding>
-					</item>
-				</menu>
-
-				<menu n="5">
-					<item n="5">
-						<label>Radio Stack</label>
-						<binding>
-							<command>nasal</command>
-							<script>dialogs.Radio.open()</script>
-						</binding>
-					</item>
-				</menu>
-			-->
 				<menu n="100">
 					<label>E-jet-family</label>
 					<enabled type="bool">true</enabled>
@@ -261,18 +239,6 @@
 							<script>dialogs.Dialogs.tiller.open()</script>
 						</binding>
 					</item>
-					<!--
-					<item>
-						<label>System Failures</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-                             var failures = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/E-jet-family/Systems/failures-dlg.xml");
-                             failures.open();
-							</script>
-						</binding>
-					</item>
-					-->
 				</menu>
 			</default>
 		</menubar>
@@ -789,7 +755,6 @@
 			<file>Aircraft/E-jet-family/Nasal/doors.nas</file>
 		</erj>
 		<dialogs>
-			<!--<file>Aircraft/E-jet-family/Nasal/radio.nas</file>-->
 			<file>Aircraft/E-jet-family/Nasal/dialogs.nas</file>
 		</dialogs>
 		<input>
