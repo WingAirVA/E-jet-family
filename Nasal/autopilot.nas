@@ -1,38 +1,31 @@
-var Node = {
-	speed: props.globals.getNode("/autopilot/settings/speed", 1),
-	hdg: props.globals.getNode("/autopilot/settings/heading", 1),
-	alt: props.globals.getNode("/autopilot/settings/altitude", 1),
+var autopitot_setting = {
+	speed: "autopilot/settings/speed",
+	hdg: "autopilot/settings/heading",
+	alt: "autopilot/settings/altitude",
 };
 
 var toggleTOGA = func() {
-	var node = Node.speed;
-
-	if (node.getValue() == "speed-to-ga") {
-		node.setValue("");
+	if (getprop() == "speed-to-ga") {
+		setprop(autopitot_setting.speed, "");
 	} else {
-		node.setValue("speed-to-ga");
+		setprop(autopitot_setting.speed, "speed-to-ga");
 	}
 };
 
 var toggleGS = func() {
-	var hdgNode = Node.hdg;
-	var altNode = Node.alt;
-
-	if (altNode.getValue() == "gs1-hold") {
-		hdgNode.setValue("dg-heading-hold");
-		altNode.setValue("altitude-hold");
+	if (getprop(autopitot_setting.alt) == "gs1-hold") {
+		setprop(autopitot_setting.hdg, "dg-heading-hold");
+		setprop(autopitot_setting.alt, "altitude-hold");
 	} else {
-		hdgNode.setValue("nav1-hold");
-		altNode.setValue("gs1-hold");
+		setprop(autopitot_setting.hdg, "nav1-hold");
+		setprop(autopitot_setting.alt, "gs1-hold");
 	}
 };
 
 var toggleHeadingMode = func(hdg) {
-	var node = Node.hdg;
-
-	if (node.getValue() == hdg) {
-		node.setValue("dg-heading-hold");
+	if (getprop(autopitot_setting.hdg) == hdg) {
+		setprop(autopitot_setting.hdg, "dg-heading-hold");
 	} else {
-		node.setValue(hdg);
+		setprop(autopitot_setting.hdg, hdg);
 	}
 };
