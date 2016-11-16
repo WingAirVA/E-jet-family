@@ -5,7 +5,7 @@ var autopitot_setting = {
 };
 
 var toggleTOGA = func() {
-	if (getprop() == "speed-to-ga") {
+	if (getprop(autopitot_setting.speed) == "speed-to-ga") {
 		setprop(autopitot_setting.speed, "");
 	} else {
 		setprop(autopitot_setting.speed, "speed-to-ga");
